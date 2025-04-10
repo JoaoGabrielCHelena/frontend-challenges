@@ -1,0 +1,65 @@
+name: Sync Branches data to main branch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Get prettier
+        run: npm i prettier
+
+      - name: Get list of folders
+        run: |
+          folders=$(find . -mindepth 1 -maxdepth 1 -type d ! -name ".*" -exec basename {} \;)
+          echo "FOLDERS<<EOF" >> $GITHUB_ENV
+          echo "$folders" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+
+      - name: Clone folders data and thumbnails to gallery
+        run: |
+          FOLDERSARRAY=($FOLDERS)
+
+          for folder in "${FOLDERSARRAY[@]}"; do
+
+            if [ -f "./$folder/.data" ]; then
+              cp ./$folder/.data ./gallery/data-files/.data-$folder
+            fi
+
+            if [ -f "./$folder/thumbnail.png" ]; then
+              cp ./$folder/thumbnail.png ./gallery/public/thumbnails/$folder.png
+            fi
+
+          done
+
+          cd ./gallery
+
+          git add ./data-files/
+          git add ./public/thumbnails/
+
+          ./generateJSON.sh
+
+          git add ./src/assets/data.json
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync data-files and thumbnails" || echo "No changes to commit"
+          git push origin main

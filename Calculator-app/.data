@@ -1,0 +1,10 @@
+{
+  branch: "Calculator-app",
+  name: "Calculator App",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
+  description: "Gigantic javascript to handle this since I wanted for It to function like a real calculator I had",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/Frontend-Challenges/tree/main/Calculator-app",
+  liveUrl: "https://joaogabrielchelena.github.io/Frontend-Challenges/Calculator-app",
+  priority: 3,
+}
