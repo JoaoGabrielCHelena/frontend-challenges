@@ -58,6 +58,8 @@ jobs:
 
           git add ./src/assets/data.json
 
+          cd ..
+
       - name: Commit and push changes to main
         run: |
           git config --global user.name "github-actions[bot]"
