@@ -1,0 +1,10 @@
+{
+  branch: "News-homepage",
+  name: "News homepage",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl",
+  description: "One of my first full pages. Past me knew how to use grid!",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/Frontend-Challenges/tree/main/News-homepage",
+  liveUrl: "https://joaogabrielchelena.github.io/Frontend-Challenges/News-homepage",
+  priority: 2,
+}

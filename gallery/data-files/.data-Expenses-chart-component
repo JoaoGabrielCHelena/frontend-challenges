@@ -1,0 +1,10 @@
+{
+  branch: "Expenses-chart-component",
+  name: "Expenses chart component",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt",
+  description: "Another older challenge",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/Frontend-Challenges/tree/main/Expenses-chart-component",
+  liveUrl: "https://joaogabrielchelena.github.io/Frontend-Challenges/Expenses-chart-component",
+  priority: 1,
+}

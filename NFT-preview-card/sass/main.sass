@@ -1,0 +1,124 @@
+$text-color: hsl(215, 51%, 70%)
+$Accent-color: hsl(178, 100%, 50%)
+$Accent-color-transparent: hsla(178, 100%, 50%, 0.5)
+$main-BG: hsl(217, 54%, 11%)
+$card-BG: hsl(216, 50%, 16%)
+$line: hsl(215, 32%, 27%)
+$component-bd-radius: .375rem
+$transition-time: 250ms
+
+body
+    background: $main-BG
+    padding: 4rem 1rem
+
+#nft-component
+    background: $card-BG
+    font-family: 'Outfit', sans-serif
+    margin: auto
+    max-width: 330px 
+    height: 550px
+    border-radius: $component-bd-radius
+    color: $text-color
+
+    .card-body
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+    .card-image-top 
+        position: relative
+
+        img 
+            width: 100%
+            border-radius: $component-bd-radius
+        &::before
+            content: ""
+            transition: $transition-time opacity
+            position: absolute
+            opacity: 0%
+            width: 100%
+            height: 100%
+            border-radius: $component-bd-radius
+            background: $Accent-color-transparent
+        &::after
+            content: url(../images/icon-view.svg)
+            transition: $transition-time opacity
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+            opacity: 0%
+        &:hover::before,
+        &:hover::after
+            opacity: 100%
+
+    a
+        color: white
+        text-decoration: none
+        &:hover
+            color: $Accent-color
+        
+    .card-title
+        font-size: 23px
+        font-weight: 600
+        margin-top: 1rem
+
+    .card-text
+        margin: 0 
+
+    .bottom-body-row
+        display: grid
+        grid-template-columns: max-content auto
+        justify-items: end
+
+        @mixin before-positioning()
+            margin-right: .5ch 
+            position: relative
+            top: 3px
+             
+
+        .currency
+            margin-bottom: 0 
+            color: $Accent-color
+            &::before
+                content:  url(../images/icon-ethereum.svg)
+                @include before-positioning()
+            
+
+        .time
+            margin-bottom: 0
+            &::before
+                content: url(../images/icon-clock.svg) 
+                @include before-positioning()
+                
+                
+
+    .card-footer
+        display: grid
+        align-items: center
+        grid-template-columns: min-content auto
+        border-top: 1px $line solid
+        padding: 1rem 0 0 .5rem
+
+        img
+            height: 32px
+            aspect-ratio: 1
+            border: 1px white solid
+            border-radius: 50%
+            margin-right: 1rem
+
+        *
+            margin: 0
+
+#attribution
+    font-size: 11px
+    text-align: center
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1000
+    color: white
+    a 
+        color: hsl(228, 100%, 87%)
