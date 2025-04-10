@@ -30,14 +30,14 @@
         "priority": 1
     },
     {
-        "branch": "Loterias",
-        "name": "Loterias",
-        "src": "Brainn",
-        "srcLink": "https://github.com/brainnco-exs/readme-frontend",
-        "description": "My first use of Vite + React as Next.js felt overkill for this. The code works but vercel has issues handling how I used the URL's if you reload",
-        "codeUrl": "https://github.com/JoaoGabrielCHelena/Loterias-FC",
-        "liveUrl": "https://loterias-fc.vercel.app/",
-        "priority": 5
+        "branch": "NFT-preview-card",
+        "name": "NFT preview card component",
+        "src": "Frontend Mentor",
+        "srcLink": "https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U",
+        "description": "simple card. One of the first things I did.",
+        "codeUrl": "https://github.com/joaogabrielchelena/frontend-challenges/tree/main/NFT-preview-card",
+        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/NFT-preview-card",
+        "priority": 0
     },
     {
         "branch": "News-homepage",
@@ -50,16 +50,6 @@
         "priority": 2
     },
     {
-        "branch": "NFT-preview-card",
-        "name": "NFT preview card component",
-        "src": "Frontend Mentor",
-        "srcLink": "https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U",
-        "description": "simple card. One of the first things I did.",
-        "codeUrl": "https://github.com/joaogabrielchelena/frontend-challenges/tree/main/NFT-preview-card",
-        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/NFT-preview-card",
-        "priority": 0
-    },
-    {
         "branch": "Order-summary-component",
         "name": "Order sumarry component",
         "src": "Frontend Mentor",
@@ -70,13 +60,23 @@
         "priority": 0
     },
     {
+        "branch": "Qr-code-component",
+        "name": "Testimonials grid section",
+        "src": "Frontend Mentor",
+        "srcLink": "https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H",
+        "description": "Single html file because it took me a year to realise that I don't need SASS for everything.",
+        "codeUrl": "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Qr-code-component",
+        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/Qr-code-component",
+        "priority": 2
+    },
+    {
         "branch": "Testimonials-grid-section",
         "name": "Testimonials grid section",
         "src": "Frontend Mentor",
         "srcLink": "https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7",
         "description": "A simple grid, also very old. (by my standards at least)",
         "codeUrl": "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Testimonials-grid-section",
-        "liveUrl": "https://joaogabrielchelena.github.io/frontend-fhallenges/Testimonials-grid-section",
+        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/Testimonials-grid-section",
         "priority": 0
     },
     {
@@ -87,6 +87,16 @@
         "description": "Made with Next.js, the challenge involves using data from REST Countries API. One of my first attempts at using React, the code is majorly flawed.",
         "codeUrl": "https://github.com/JoaoGabrielCHelena/WitW-FM",
         "liveUrl": "https://witw-fm.vercel.app/",
+        "priority": 5
+    },
+    {
+        "branch": "Loterias",
+        "name": "Loterias",
+        "src": "Brainn",
+        "srcLink": "https://github.com/brainnco-exs/readme-frontend",
+        "description": "My first use of Vite + React as Next.js felt overkill for this. The code works but vercel has issues handling how I used the URL's if you reload",
+        "codeUrl": "https://github.com/JoaoGabrielCHelena/Loterias-FC",
+        "liveUrl": "https://loterias-fc.vercel.app/",
         "priority": 5
     }
 ]
