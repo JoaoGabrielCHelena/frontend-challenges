@@ -85,6 +85,11 @@ jobs:
           for folder in "${FOLDERSARRAY[@]}"; do
             echo "Copying Folder: $folder"
 
+            if [ ! -d ./main/$folder ]; then
+              echo "Skipping $folder: does not exist in ./main/"
+              continue
+            fi
+
             if [ -f ./main/$folder/.vite ]; then
               cd main/$folder
               npm ci
