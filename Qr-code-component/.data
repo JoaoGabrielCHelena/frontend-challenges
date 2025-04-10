@@ -1,6 +1,6 @@
 {
   branch: "Qr-code-component",
-  name: "Testimonials grid section",
+  name: "QR code component",
   src: "Frontend Mentor",
   srcLink: "https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H",
   description: "Single html file because it took me a year to realise that I don't need SASS for everything.",
