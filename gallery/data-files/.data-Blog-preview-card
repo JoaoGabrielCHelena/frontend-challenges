@@ -1,0 +1,10 @@
+{
+  branch: "Blog-preview-card",
+  name: "Blog preview card",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS",
+  description: "A second Single html file, on the same day as the Qr code component, because I'm enjoying doing these. Takes me less than an hour and I find it fun.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Blog-preview-card",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Blog-preview-card",
+  priority: 2,
+}
