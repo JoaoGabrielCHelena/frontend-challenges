@@ -97,6 +97,7 @@ jobs:
               # returning from ./main/$folder
               cd ../../
               cp -r ./main/$folder/dist/ ./$folder
+              git add $folder
             elif [ ! -f "./main/$folder/.external" ]; then
               cp -r ./main/$folder .
               git add $folder
