@@ -24,7 +24,7 @@ function Card({
 }) {
     return (
         <div className={`${className} card`}>
-            <img src={`/thumbnails/${branch}.png`} width="350" alt="" />
+            <img src={`./thumbnails/${branch}.png`} width="350" alt="" />
             <div className="cardContent">
                 <div>
                     <div className="cardTitleWrapper">
@@ -33,9 +33,9 @@ function Card({
                             {name}
                         </div>
                     </div>
-                        <p className="cardSrc">
-                            from: <a href={srcLink}>{src}</a>
-                        </p>
+                    <p className="cardSrc">
+                        from: <a href={srcLink}>{src}</a>
+                    </p>
                 </div>
                 <p className="cardDescription">{description}</p>
                 <div className="cardButtonRow">
@@ -78,7 +78,7 @@ function App() {
     })
 
     // beyond 3 cards it breaks, i think
-    let highlightedBranches = [""]
+    let highlightedBranches = ["Loterias", "WitW"]
     let highlightCards = organisedData.map((e) => {
         if (highlightedBranches.includes(e.branch)) {
             return (
@@ -122,11 +122,7 @@ function App() {
                         This is a catalog of multiple frontend challenges I’ve
                         done.
                     </p>
-                    <p className="subtitleQuip">
-                        It’s also in an over-complicated repository because i
-                        didn’t want to have a flood of repositories on my
-                        profile!
-                    </p>
+                    <p className="subtitleQuip">all in a monorepo!</p>
                     <div className="profileRow">
                         <a href="https://www.frontendmentor.io/profile/JoaoGabrielCHelena">
                             <Svg.frontendMentor />
@@ -161,8 +157,7 @@ function App() {
                         From single html files to multi-pages projects
                     </p>
                     <p className="subtitleQuip">
-                        and because i wanted them all in the same repository,
-                        each is a single branch in this repo
+                        organised from best to worst, sorta
                     </p>
                     <div className={`${utils.grid}`}>{cards}</div>
                 </section>

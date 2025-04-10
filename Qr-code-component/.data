@@ -1,0 +1,10 @@
+{
+  branch: "Qr-code-component",
+  name: "Testimonials grid section",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H",
+  description: "Single html file because it took me a year to realise that I don't need SASS for everything.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Qr-code-component",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Qr-code-component",
+  priority: 2,
+}

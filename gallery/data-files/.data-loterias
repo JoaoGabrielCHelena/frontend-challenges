@@ -1,0 +1,10 @@
+{
+  branch: "Loterias",
+  name: "Loterias",
+  src: "Brainn",
+  srcLink: "https://github.com/brainnco-exs/readme-frontend",
+  description: "My first use of Vite + React as Next.js felt overkill for this. The code works but vercel has issues handling how I used the URL's if you reload",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/Loterias-FC",
+  liveUrl: "https://loterias-fc.vercel.app/",
+  priority: 5,
+}

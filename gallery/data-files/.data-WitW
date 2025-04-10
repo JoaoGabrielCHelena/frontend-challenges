@@ -1,0 +1,10 @@
+{
+  branch: "WitW",
+  name: "Where in the World",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca",
+  description: "Made with Next.js, the challenge involves using data from REST Countries API. One of my first attempts at using React, the code is majorly flawed.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/WitW-FM",
+  liveUrl: "https://witw-fm.vercel.app/",
+  priority: 5,
+}
