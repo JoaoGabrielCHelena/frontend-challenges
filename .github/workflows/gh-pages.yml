@@ -1,4 +1,4 @@
-name: Sync Branches to gh-pages for GitHub Pages
+name: Sync folders to gh-pages
 
 on:
   push:

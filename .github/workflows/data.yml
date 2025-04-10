@@ -1,4 +1,4 @@
-name: Sync Branches data to main branch
+name: Sync folder data to gallery
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   deploy:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
