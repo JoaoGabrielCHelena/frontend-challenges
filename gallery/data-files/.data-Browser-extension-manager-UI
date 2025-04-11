@@ -1,0 +1,10 @@
+{
+  branch: "Browser-extension-manager-UI",
+  name: "Browser extension manager UI",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp",
+  description: "Quick project in Vite + React. More a test of how fast I could do this while at an acceptable quality.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Browser-extension-manager-UI",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Browser-extension-manager-UI",
+  priority: 5,
+}
