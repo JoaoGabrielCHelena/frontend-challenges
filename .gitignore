@@ -24,3 +24,29 @@ gallery/*.njsproj
 gallery/*.sln
 gallery/*.sw?
 gallery/.git
+
+#Browser-extension-manager-UI ignores
+# Logs
+Browser-extension-manager-UI/logs
+Browser-extension-manager-UI/*.log
+Browser-extension-manager-UI/npm-debug.log*
+Browser-extension-manager-UI/yarn-debug.log*
+Browser-extension-manager-UI/yarn-error.log*
+Browser-extension-manager-UI/pnpm-debug.log*
+Browser-extension-manager-UI/lerna-debug.log*
+
+Browser-extension-manager-UI/node_modules
+Browser-extension-manager-UI/dist
+Browser-extension-manager-UI/dist-ssr
+Browser-extension-manager-UI/*.local
+
+# Editor directories and files
+Browser-extension-manager-UI/.vscode/*
+Browser-extension-manager-UI/!.vscode/extensions.json
+Browser-extension-manager-UI/.idea
+Browser-extension-manager-UI/.DS_Store
+Browser-extension-manager-UI/*.suo
+Browser-extension-manager-UI/*.ntvs*
+Browser-extension-manager-UI/*.njsproj
+Browser-extension-manager-UI/*.sln
+Browser-extension-manager-UI/*.sw?

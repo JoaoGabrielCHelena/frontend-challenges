@@ -1,0 +1,323 @@
+@mixin text1 {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+@mixin text2 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+@mixin text3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+}
+
+@mixin text4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+}
+
+@mixin text5 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+@mixin text6 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+.item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    grid-column: span 4;
+    &Grid {
+        display: grid;
+        grid-auto-rows: 200px;
+        padding: 0 0 64px;
+        gap: 12px;
+        grid-template-columns: repeat(4, 1fr);
+        @media (min-width: 556px) {
+            grid-template-columns: repeat(8, 1fr);
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+    &Row {
+        &Top {
+            display: flex;
+            gap: 16px;
+        }
+        &Bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &Title {
+        @include text2;
+        margin-bottom: 8px;
+    }
+    &Description {
+        @include text5;
+    }
+    &Remove {
+        padding: 8px 16px;
+        border-radius: 50px;
+        @include text6;
+    }
+    &Switch {
+        position: relative;
+        z-index: 0;
+        input {
+            position: absolute;
+            height: 0;
+            width: 0;
+
+            &:focus-visible {
+                outline: none;
+                & + span {
+                    outline: 2px solid var(--r400);
+                    outline-offset: 2px;
+                }
+            }
+
+            &:checked + span:after {
+                // 18 is the size of the dot (16px) + the 2 of distance away from the right
+                left: calc(100% - 18px);
+            }
+        }
+        span {
+            position: relative;
+            display: block;
+
+            width: 36px;
+            height: 20px;
+
+            border-radius: 50px;
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 2px;
+                left: 2px;
+                height: calc(100% - 4px);
+                aspect-ratio: 1;
+                border-radius: 50px;
+                background: var(--n0);
+                transition: 150ms left ease-in-out;
+                box-shadow:
+                    0px 1px 3px rgba(10, 13, 18, 0.1),
+                    0px 1px 2px -1px rgba(9, 21, 64, 0.6);
+            }
+        }
+    }
+}
+
+.filter {
+    &Row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 40px;
+        @media (min-width: 556px) {
+            margin-bottom: 32px;
+            flex-direction: row;
+        }
+    }
+
+    &Title {
+        @include text1;
+    }
+    &Option {
+        position: absolute;
+        height: 0;
+        width: 0;
+        &:checked + &Text {
+            @include text4;
+        }
+        &Text {
+            cursor: pointer;
+            padding: 8px 20px 10px;
+            border-radius: 50px;
+            @include text3;
+        }
+        &Wrapper {
+            display: flex;
+            gap: 12px;
+        }
+        &:focus-visible {
+            outline: none;
+            & + .filterOptionText {
+                outline: 2px solid var(--r400);
+                outline-offset: 2px;
+            }
+        }
+    }
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 0 0 40px;
+    @media (min-width: 556px) {
+        margin: 0 0 40px;
+    }
+    @media (min-width: 992px) {
+        margin: 0 0 64px;
+    }
+}
+
+[data-theme="light"] {
+    .item {
+        background: var(--n0);
+        border: 1px solid var(--n200);
+        box-shadow:
+            0px 2px 2px rgba(194, 206, 225, 0.2),
+            0px 1px 5px 1px rgba(194, 206, 225, 0.22);
+        &Title {
+            color: var(--n900);
+        }
+        &Description {
+            color: var(--n600);
+        }
+        &Remove {
+            color: var(--n900);
+            border: 1px solid var(--n300);
+            &:hover {
+                color: var(--n0);
+                background: var(--r700);
+                border-color: var(--r700);
+            }
+        }
+        &Switch {
+            input {
+                &:checked + span {
+                    background: var(--r700);
+                    &:hover {
+                        background: var(--r500);
+                    }
+                }
+                & + span {
+                    background: var(--n300);
+                }
+            }
+        }
+    }
+    .filter {
+        &Title {
+            color: var(--n900);
+        }
+        &Option {
+            &:checked + .filterOptionText {
+                color: var(--n0);
+                background: var(--r700);
+                border-color: var(--r700);
+                opacity: 1;
+                box-shadow: none;
+            }
+            &Text {
+                color: var(--n900);
+                background: var(--n0);
+                border: 1px solid var(--n200);
+                box-shadow: 0px 1px 2px rgba(184, 196, 215, 0.4);
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    .topbar {
+        svg {
+            color: var(--n900);
+        }
+        background: var(--n0);
+        border: 1px solid var(--n200);
+        box-shadow: 0px 2px 3px #d9e5f4;
+    }
+}
+
+[data-theme="dark"] {
+    .item {
+        background: var(--n800);
+        border: 1px solid var(--n600);
+        &Title {
+            color: var(--n0);
+        }
+        &Description {
+            color: var(--n300);
+        }
+        &Remove {
+            color: var(--n0);
+            border: 1px solid var(--n600);
+            &:hover {
+                color: var(--n900);
+                background: var(--r400);
+                border-color: var(--r400);
+            }
+        }
+        &Switch {
+            input {
+                &:checked + span {
+                    background: var(--r400);
+                    &:hover {
+                        background: var(--r500);
+                    }
+                }
+                & + span {
+                    background: var(--n600);
+                }
+            }
+        }
+    }
+    .filter {
+        &Title {
+            color: var(--n0);
+        }
+        &Option {
+            &:checked + .filterOptionText {
+                color: var(--n900);
+                background: var(--r400);
+                border-color: var(--r400);
+            }
+            &Text {
+                color: var(--n0);
+                background: var(--n700);
+                border: 1px solid var(--n600);
+                &:hover {
+                    background: var(--n600);
+                }
+            }
+        }
+    }
+    .topbar {
+        svg {
+            color: var(--n0);
+        }
+        border: 1px solid var(--n800);
+        background: var(--n800);
+    }
+}

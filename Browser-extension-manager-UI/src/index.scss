@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+[data-theme="light"] {
+    --gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+
+[data-theme="dark"] {
+    --gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.themeContainer {
+    --n0: #FBFDFE;
+    --n100: #EEEEEE;
+    --n200: #D6E2F5;
+    --n300: #C6C6C6;
+    --n600: #535868;
+    --n700: #2F364B;
+    --n800: #202535;
+    --n900: #091540;
+    --r400: #F25C54;
+    --r500: #DE4840;
+    --r700: #C7231A;
+
+    background: var(--gradient);
+}
+
+.wrapper {
+    max-width: 1170px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    padding-top: 20px;
+    @media (min-width: 556px) {
+        padding-top: 24px;
+    }
+    @media (min-width: 992px) {
+        padding-top: 40px;
+    }
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--r400);
+  outline-offset: 2px;
+}

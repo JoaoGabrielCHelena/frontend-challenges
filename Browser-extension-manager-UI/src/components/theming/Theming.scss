@@ -1,0 +1,22 @@
+.themeButton {
+    padding: 14px;
+    border-radius: 12px;
+}
+
+[data-theme="light"] {
+    .themeButton {
+        background: var(--n100);
+        &:hover {
+            background: var(--n300);
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .themeButton {
+        background: var(--n700);
+        &:hover {
+            background: var(--n600);
+        }
+    }
+}
