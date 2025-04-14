@@ -1,3 +1,5 @@
+# i know these overlap a bunch, i do not really care
+
 # gallery ignores
 # Logs
 gallery/logs
@@ -50,3 +52,30 @@ Browser-extension-manager-UI/*.ntvs*
 Browser-extension-manager-UI/*.njsproj
 Browser-extension-manager-UI/*.sln
 Browser-extension-manager-UI/*.sw?
+
+
+#Designo-website ignores
+# Logs
+Designo-website/logs
+Designo-website/*.log
+Designo-website/npm-debug.log*
+Designo-website/yarn-debug.log*
+Designo-website/yarn-error.log*
+Designo-website/pnpm-debug.log*
+Designo-website/lerna-debug.log*
+
+Designo-website/node_modules
+Designo-website/dist
+Designo-website/dist-ssr
+Designo-website/*.local
+
+# Editor directories and files
+Designo-website/.vscode/*
+Designo-website/!.vscode/extensions.json
+Designo-website/.idea
+Designo-website/.DS_Store
+Designo-website/*.suo
+Designo-website/*.ntvs*
+Designo-website/*.njsproj
+Designo-website/*.sln
+Designo-website/*.sw?
