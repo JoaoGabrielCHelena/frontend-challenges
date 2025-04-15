@@ -1,11 +1,11 @@
-import './App.scss'
+import "./Home.scss"
 
 function Home() {
-  return (
-    <>
-      A
-    </>
-  )
+    return (
+        <>
+        this is some test text
+        </>
+    )
 }
 
 export default Home

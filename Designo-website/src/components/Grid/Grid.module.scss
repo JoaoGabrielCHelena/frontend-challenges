@@ -1,0 +1,83 @@
+@use "sass:list";
+
+$breakpoints:
+    1px "S" 1 unset,
+    556px "M" 12 10px,
+    1024px "L" 12 30px;
+
+@each $min, $name in $breakpoints {
+    @media screen and (min-width: $min) {
+        @for $i from 1 through 12 {
+            .fixedSpan#{$i}#{$name} {
+                grid-column: 1 / span #{$i};
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .gridStart#{$i}#{$name} {
+                grid-column-start: #{$i};
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .span#{$i}#{$name} {
+                grid-column: span #{$i};
+            }
+        }
+
+        @for $i from 1 through 2 {
+            .rowSpan#{$i}#{$name} {
+                grid-row: span #{$i};
+            }
+        }
+
+        .flexRow#{$name} {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flexColumn#{$name} {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.grid {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media screen and (min-width: 556px) {
+        display: grid;
+    }
+
+    @each $min, $name, $cols, $gap in $breakpoints {
+        @media screen and (min-width: $min) {
+            grid-template-columns: repeat(#{$cols}, 1fr);
+            column-gap: $gap;
+        }
+    }
+}
+
+.spanRow {
+    @each $min, $name, $cols in $breakpoints {
+        @media screen and (min-width: $min) {
+            grid-column: span $cols;
+        }
+    }
+}
+
+.subgrid {
+    @media screen and (min-width: 556px) {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
+}
+
+@mixin transition($variables...) {
+    transition-property: $variables;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

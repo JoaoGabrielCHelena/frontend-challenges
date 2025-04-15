@@ -1,0 +1,120 @@
+.card {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("/assets/shared/desktop/bg-pattern-call-to-action.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-color: var(--primary);
+    flex-direction: column;
+    padding: 64px 24px;
+    @media (min-width: 1024px) {
+        background-position-x: right;
+        padding: 72px 95px;
+        flex-direction: row;
+    }
+    &Wrapper {
+        background: linear-gradient(
+            to bottom,
+            var(--white) 75%,
+            var(--black) 75.1%,
+            var(--black)
+        );
+    }
+    &Text {
+        max-width: 460px;
+        text-align: center;
+        margin-bottom: 32px;
+        @media (min-width: 1024px) {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}
+
+.footer {
+    background-color: var(--black);
+    padding: 64px 0;
+
+    @media screen and (min-width: 556px) {
+        padding: 80px 0;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 72px 0;
+    }
+    &Top {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+        img {
+            width: 100%;
+            max-width: 202px;
+        }
+        @media screen and (min-width: 556px) {
+            flex-direction: row;
+            border-bottom: 1px solid #4a494b;
+            margin-bottom: 32px;
+        }
+    }
+    &Bottom {
+        // i dont like it but its the better way to not clash with the other classes
+        @media screen and (max-width: 555px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+        }
+    }
+}
+
+.link {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--white);
+    &:hover {
+        text-decoration: underline;
+    }
+    &List {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 32px;
+        margin-top: 32px;
+        border-top: 1px solid #4a494b;
+        width: 100%;
+        gap: 32px;
+        @media screen and (min-width: 556px) {
+            width: unset;
+            flex-direction: row;
+            gap: 42px;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+    }
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    height: 100%;
+    gap: 16px;
+    margin-top: auto;
+    a {
+        height: 24px;
+        color: var(--primary);
+        &:hover {
+            color: var(--secondary);
+        }
+    }
+}

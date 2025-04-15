@@ -1,0 +1,25 @@
+@mixin button {
+    padding: 16px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        color: var(--white);
+        background: var(--secondary);
+    }
+}
+
+.btnLight {
+    @include button;
+    color: var(--white);
+    background: var(--primary);
+}
+
+.btnDark {
+    @include button;
+    color: var(--darkGrey);
+    background: var(--white);
+}

@@ -1,0 +1,18 @@
+$Colors:
+"Primary" var(--primary),
+"Secondary" var(--secondary),
+"White" var(--white),
+"Black" var(--black),
+"LightGrey" var(--lightGrey),
+"DarkGrey" var(--darkGrey),
+"Grey" var(--grey);
+
+
+@each $name, $var in $Colors {
+    .clr#{$name} {
+        color: $var;
+    }
+    .bg#{$name} {
+        background-color: $var;
+    }
+}

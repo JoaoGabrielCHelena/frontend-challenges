@@ -1,0 +1,7 @@
+styling rules I should keep, not because they are good but for consistency
+https://youtu.be/YE0U018Copw?si=a0Au1AzUFoKt6FjP&t=465
+
+
+If something has a class, all the stylings should be in that single class.
+(Excluding only stylings coming from Grid, those should always be done via the object.)
+Else, use the utility and global classes needed
