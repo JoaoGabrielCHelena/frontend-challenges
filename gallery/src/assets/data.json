@@ -120,7 +120,7 @@
         "priority": 0
     },
     {
-        "branch": "Time-tracking-dashboard/",
+        "branch": "Time-tracking-dashboard",
         "name": "Time tracking dashboard",
         "src": "Frontend Mentor",
         "srcLink": "https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw",
