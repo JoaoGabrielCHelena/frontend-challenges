@@ -8,17 +8,17 @@ function LocationList() {
     let locationsData = [
             {
                 title: "canada",
-                image: "/assets/shared/desktop/illustration-canada.svg",
+                image: "./assets/shared/desktop/illustration-canada.svg",
                 rotate: "-90deg",
             },
             {
                 title: "australia",
-                image: "/assets/shared/desktop/illustration-australia.svg",
+                image: "./assets/shared/desktop/illustration-australia.svg",
                 rotate: "180deg",
             },
             {
                 title: "united kingdom",
-                image: "/assets/shared/desktop/illustration-united-kingdom.svg",
+                image: "./assets/shared/desktop/illustration-united-kingdom.svg",
                 rotate: "90deg",
             },
         ],

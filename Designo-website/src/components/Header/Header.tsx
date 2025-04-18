@@ -10,7 +10,7 @@ function Header() {
         <Grid.container>
             <header className={`${Grid.spanRow} ${styles.header}`}>
                 <Link aria-label="Go to home" to="/">
-                    <img src="/assets/shared/desktop/logo-dark.png" alt="" />
+                    <img src="./assets/shared/desktop/logo-dark.png" alt="" />
                 </Link>
                 <button
                     onClick={() => setOpen(!open)}

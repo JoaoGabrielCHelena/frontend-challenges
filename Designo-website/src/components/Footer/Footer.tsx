@@ -37,7 +37,7 @@ function Footer({ footerCta }: { footerCta?: boolean }) {
                 <Grid.container>
                     <div className={`${Grid.spanRow} ${styles.footerTop}`}>
                         <img
-                            src="/assets/shared/desktop/logo-light.png"
+                            src="./assets/shared/desktop/logo-light.png"
                             alt=""
                         />
                         <div className={styles.linkList}>

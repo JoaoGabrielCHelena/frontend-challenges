@@ -22,16 +22,16 @@ function PageList(props: pageListProps) {
             >
                 <picture>
                     <source
-                        srcSet={`/assets/home/desktop/${i.image == "image-web-design" && Large ? i.image + "-large" : i.image}.jpg`}
+                        srcSet={`./assets/home/desktop/${i.image == "image-web-design" && Large ? i.image + "-large" : i.image}.jpg`}
                         media="(min-width: 1024px)"
                     />
                     <source
-                        srcSet={`/assets/home/tablet/${i.image}.jpg`}
+                        srcSet={`./assets/home/tablet/${i.image}.jpg`}
                         media="(min-width: 556px)"
                     />
                     <img
                         loading="lazy"
-                        src={`/assets/home/mobile/${i.image}.jpg`}
+                        src={`./assets/home/mobile/${i.image}.jpg`}
                         className={styles.pageBg}
                         alt=""
                     />
