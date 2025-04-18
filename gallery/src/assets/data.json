@@ -10,6 +10,16 @@
         "priority": 0
     },
     {
+        "branch": "Advice-generator",
+        "name": "Advice generator",
+        "src": "Frontend Mentor",
+        "srcLink": "https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db",
+        "description": "Done quickly in a single file for the fun of it.",
+        "codeUrl": "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Advice-generator/",
+        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/Advice-generator/",
+        "priority": 2
+    },
+    {
         "branch": "Blog-preview-card",
         "name": "Blog preview card",
         "src": "Frontend Mentor",
@@ -108,6 +118,16 @@
         "codeUrl": "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Testimonials-grid-section",
         "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/Testimonials-grid-section",
         "priority": 0
+    },
+    {
+        "branch": "Time-tracking-dashboard/",
+        "name": "Time tracking dashboard",
+        "src": "Frontend Mentor",
+        "srcLink": "https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw",
+        "description": "Still from the times where I thought everything had to have Bootstrap. My first time using SASS mixins well.",
+        "codeUrl": "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Time-tracking-dashboard/",
+        "liveUrl": "https://joaogabrielchelena.github.io/frontend-challenges/Time-tracking-dashboard/",
+        "priority": 3
     },
     {
         "branch": "WitW",
