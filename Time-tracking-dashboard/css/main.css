@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  color: white;
+  background: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+}
+@media (min-width: 996px) {
+  body {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.special-block {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.main-block {
+  background: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-block:not(#profile) {
+  box-shadow: 0 0 0em 1px hsl(235, 46%, 20%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  padding: 2rem;
+}
+.main-block:not(#profile):hover:not(:has(img:hover)) {
+  cursor: pointer;
+  background-color: color-mix(in srgb, hsl(235, 46%, 20%) 90%, white);
+}
+.main-block:not(#profile) h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.main-block:not(#profile) .previous {
+  font-size: 16px;
+  line-height: 16px;
+  color: hsl(236, 100%, 87%);
+}
+.main-block:not(#profile) .hours {
+  font-weight: 300;
+}
+.main-block:not(#profile) img {
+  padding: 0.8rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.4rem;
+}
+.main-block:not(#profile) img:hover {
+  filter: brightness(150%);
+}
+
+#profile img {
+  width: 5.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px white solid;
+}
+#profile h1 {
+  font-weight: 300;
+}
+#profile p {
+  margin-bottom: 0;
+  color: hsl(236, 100%, 87%);
+}
+#profile .profile-content-wrapper {
+  display: flex;
+  padding: 0 2rem;
+}
+#profile .profile-content-wrapper:nth-child(2) {
+  display: flex;
+  height: 28%;
+  justify-content: space-evenly;
+}
+#profile .special-block {
+  background: hsl(246, 80%, 60%);
+  height: 70%;
+}
+#profile .special-block .profile-content-wrapper {
+  display: flex;
+}
+#profile .active {
+  color: white;
+}
+#profile input {
+  display: none;
+}
+#profile input:checked + label {
+  color: white;
+}
+#profile label {
+  cursor: pointer;
+  color: hsl(236, 100%, 87%);
+}
+#profile label:hover {
+  filter: brightness(150%);
+}
+
+#Work {
+  background: hsl(15, 100%, 70%) url("../images/icon-work.svg") no-repeat 90% -6%;
+}
+
+#Play {
+  background: hsl(195, 74%, 62%) url("../images/icon-play.svg") no-repeat 90% -6%;
+}
+
+#Study {
+  background: hsl(348, 100%, 68%) url("../images/icon-study.svg") no-repeat 90% -6%;
+}
+
+#Exercise {
+  background: hsl(145, 58%, 55%) url("../images/icon-exercise.svg") no-repeat 90% 0;
+}
+
+#Social {
+  background: hsl(264, 64%, 52%) url("../images/icon-social.svg") no-repeat 90% 0;
+}
+
+#SelfCare {
+  background: hsl(43, 84%, 65%) url("../images/icon-self-care.svg") no-repeat 90% -6%;
+}
+
+.wrapper {
+  gap: 1.5rem;
+  display: grid;
+}
+@media (min-width: 1125px) {
+  .wrapper {
+    grid-template: repeat(2, 246px)/repeat(4, 1fr);
+    width: 1110px;
+  }
+  .wrapper .main-block:not(#profile) .hours {
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+  .wrapper #profile {
+    grid-row: 1/-1;
+  }
+  .wrapper #profile .profile-content-wrapper {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .wrapper #profile img {
+    margin-top: 2rem;
+  }
+  .wrapper #profile p {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 996px) and (max-width: 1125px) {
+  .wrapper {
+    grid-template: repeat(3, 164px)/repeat(3, 1fr);
+    max-width: 1025px;
+  }
+  .wrapper .main-block:not(#profile) {
+    padding: 2rem 1rem;
+  }
+  .wrapper .main-block:not(#profile) .hours {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  .wrapper .main-block:not(#profile) img {
+    top: 1.5rem;
+    right: 0.5rem;
+  }
+  .wrapper .main-block:not(#profile) .previous {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+  }
+  .wrapper #profile {
+    grid-row: 1/-1;
+  }
+  .wrapper #profile .profile-content-wrapper {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .wrapper #profile img {
+    margin-top: 2rem;
+  }
+  .wrapper #profile p {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 565px) and (max-width: 996px) {
+  .wrapper {
+    grid-template: repeat(4, 246px)/repeat(2, 1fr);
+    max-width: 800px;
+    margin: auto;
+  }
+  .wrapper .main-block:not(#profile) .hours {
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+  .wrapper #profile {
+    grid-column: 1/-1;
+  }
+  .wrapper #profile .special-block .profile-content-wrapper {
+    height: 100%;
+  }
+  .wrapper #profile .profile-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .wrapper #profile img {
+    margin-top: 0rem;
+  }
+  .wrapper #profile p {
+    margin-top: 0rem;
+  }
+}
+@media (max-width: 565px) {
+  .wrapper {
+    grid-template: repeat(7, 164px)/repeat(1, 1fr);
+    max-width: 480px;
+    margin: auto;
+  }
+  .wrapper .main-block:not(#profile) {
+    padding: 2rem 1rem;
+  }
+  .wrapper .main-block:not(#profile) .hours {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  .wrapper .main-block:not(#profile) img {
+    top: 1.5rem;
+    right: 0.5rem;
+  }
+  .wrapper .main-block:not(#profile) .previous {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+  }
+  .wrapper #profile {
+    grid-column: 1/-1;
+  }
+  .wrapper #profile .special-block .profile-content-wrapper {
+    height: 100%;
+  }
+  .wrapper #profile .profile-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .wrapper #profile img {
+    margin-top: 0rem;
+  }
+  .wrapper #profile p {
+    margin-top: 0rem;
+  }
+}
+
+#attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+#attribution a {
+  color: hsl(228, 100%, 87%);
+}/*# sourceMappingURL=main.css.map */

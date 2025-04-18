@@ -6,7 +6,6 @@ function Facebook() {
             width="24"
             height="24"
             xmlns="http://www.w3.org/2000/svg"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >
@@ -22,7 +21,6 @@ function Facebook() {
 function Instagram() {
     return (
         <svg
-            role="presentation"
             aria-hidden="true"
             focusable="false"
             width="24"
@@ -44,7 +42,6 @@ function Pinterest() {
             width="24"
             height="24"
             xmlns="http://www.w3.org/2000/svg"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >
@@ -63,7 +60,6 @@ function Twitter() {
             width="24"
             height="20"
             xmlns="http://www.w3.org/2000/svg"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >
@@ -82,7 +78,6 @@ function Youtube() {
             width="24"
             height="24"
             xmlns="http://www.w3.org/2000/svg"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >
@@ -120,7 +115,6 @@ function Close() {
 function BackgroundCircle(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
-            role="presentation"
             aria-hidden="true"
             focusable="false"
             {...props}
@@ -147,7 +141,6 @@ function BackgroundCircle(props: React.SVGProps<SVGSVGElement>) {
 function BackgroundLeaf(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
-            role="presentation"
             aria-hidden="true"
             focusable="false"
             width="1006"
@@ -171,7 +164,6 @@ function Error() {
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >
@@ -189,7 +181,6 @@ function Carat() {
             width="7"
             height="10"
             xmlns="http://www.w3.org/2000/svg"
-            role="presentation"
             aria-hidden="true"
             focusable="false"
         >

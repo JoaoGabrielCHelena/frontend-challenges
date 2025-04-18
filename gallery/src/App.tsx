@@ -78,7 +78,7 @@ function App() {
     })
 
     // beyond 3 cards it breaks, i think
-    let highlightedBranches = ["Loterias", "WitW"]
+    let highlightedBranches = ["Designo-website", "WitW"]
     let highlightCards = organisedData.map((e) => {
         if (highlightedBranches.includes(e.branch)) {
             return (
