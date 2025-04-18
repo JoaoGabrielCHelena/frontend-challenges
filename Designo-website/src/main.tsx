@@ -30,9 +30,11 @@ export function ScrollToTop() {
   return null;
 }
 
+const basename = import.meta.env.VITE_BASENAME
+
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <ScrollToTop />
             <Routes>
                 <Route element={<Layout footerCard={true} />}>
