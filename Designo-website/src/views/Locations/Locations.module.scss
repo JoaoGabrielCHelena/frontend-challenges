@@ -1,0 +1,66 @@
+.location {
+    margin-bottom: 120px;
+    @media (min-width: 556px) {
+        &:not(:last-child) {
+            margin-bottom: 120px;
+        }
+        margin-bottom: 120px;
+    }
+    @media (min-width: 1024px) {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+        margin-bottom: 160px;
+    }
+    &Text {
+        grid-auto-rows: min-content !important;
+        grid-template-rows: unset;
+
+        align-content: center;
+        background-color: #fdf3f0;
+        background-image: url("/assets/shared/desktop/bg-pattern-three-circles.svg");
+        background-position-x: left;
+        background-position-y: bottom;
+        text-align: center;
+
+        padding: 80px 24px;
+        @media (min-width: 556px) {
+            text-align: left;
+            border-radius: 15px;
+        }
+        @media (min-width: 1024px) {
+            padding: 0;
+            grid-row: 1;
+        }
+
+        div:last-child {
+            margin-top: 24px;
+            @media (min-width: 556px) {
+                margin-top: 0;
+            }
+        }
+    }
+    &Image {
+        width: 100%;
+        display: block;
+
+        @media (min-width: 556px) {
+            border-radius: 15px;
+            margin-bottom: 24px;
+        }
+        @media (min-width: 1024px) {
+            margin-bottom: 0;
+        }
+    }
+    &Title {
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: var(--primary);
+    }
+}
+
+.bold {
+    font-weight: 700;
+}

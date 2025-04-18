@@ -1,0 +1,10 @@
+{
+  branch: "Designo-website",
+  name: "Designo Website",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT",
+  description: "A Full multipage website made with Vite + React. Some of the background images given were so awful I just didn't apply them.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Designo-website",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Designo-website",
+  priority: 5,
+}

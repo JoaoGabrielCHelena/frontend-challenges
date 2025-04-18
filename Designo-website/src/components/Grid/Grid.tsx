@@ -1,11 +1,16 @@
 import React from "react"
 import styles from "./Grid.module.scss"
 
-function Container(props: React.HTMLAttributes<HTMLDivElement>) {
-  let { children, className, ...rest } = props
+interface containerProps extends React.HTMLAttributes<HTMLDivElement> {
+  rowGap?: number,
+  fullMobile?: boolean
+}
+
+function Container(props: containerProps) {
+  let { children, className, rowGap, fullMobile, ...rest } = props
 
   return (
-    <div className={`${styles.grid} ${className ? className : ""}`} {...rest}>
+    <div style={{rowGap: (rowGap) ? `${rowGap}px` : "0"}} className={`${fullMobile ? styles.fullMobile : "" } ${styles.grid} ${className ? className : ""}`} {...rest}>
       {children}
     </div>
   )

@@ -1,0 +1,153 @@
+.attribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (min-width: 556px) {
+        flex-direction: row;
+        gap: 48px;
+        text-align: left;
+    }
+    @media (min-width: 1024px) {
+        gap: unset;
+        flex-direction: column;
+        text-align: center;
+    }
+    &Wrapper {
+        position: relative;
+        padding-bottom: 120px;
+        @media (min-width: 556px) {
+            padding-bottom: 70px;
+        }
+        @media (min-width: 1024px) {
+            padding-bottom: 160px;
+        }
+    }
+    &Container {
+        @media (min-width: 556px) {
+            row-gap: 80px !important;
+        }
+    }
+    &Leaf {
+        display: none;
+        position: absolute;
+        bottom: -145px;
+        left: 100%;
+        translate: -100% 0;
+        rotate: 180deg;
+        z-index: -1;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+    &Title {
+        margin: 48px 0 32px;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--darkGrey);
+        @media (min-width: 556px) {
+            margin: 0 0 16px;
+        }
+        @media (min-width: 1024px) {
+            margin: 48px 0 32px;
+        }
+    }
+    &Image {
+        position: relative;
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 80px 24px 450px;
+    @media (min-width: 556px) {
+        padding: 60px 0 460px;
+    }
+    @media (min-width: 1024px) {
+        padding: 145px 0;
+    }
+    a {
+        display: inline-block;
+    }
+    &Wrapper {
+        color: var(--white);
+        overflow: hidden;
+        background-color: var(--primary);
+        background-image: url("/assets/home/desktop/bg-pattern-hero-home.svg");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: left;
+        @media (min-width: 556px) {
+            border-radius: 15px;
+            background-position-x: 170px;
+        }
+        @media (min-width: 1024px) {
+            background-position-x: right;
+        }
+    }
+    &Description {
+        margin: 30px 0 40px;
+        max-width: 445px;
+    }
+    &Image {
+        position: absolute;
+        height: 574px;
+        flex-shrink: 0;
+        left: 50%;
+        translate: -50% 0;
+        bottom: -202px;
+        @media (min-width: 556px) {
+            bottom: -185px;
+        }
+
+        @media (min-width: 1024px) {
+            left: unset;
+            right: 0;
+            top: 145px;
+            width: 100%;
+            max-width: 280px;
+            translate: unset;
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+        }
+    }
+    &Text {
+        max-width: 540px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        z-index: 1;
+        @media (min-width: 1024px) {
+            align-items: flex-start;
+            text-align: left;
+            margin: unset;
+        }
+    }
+    &Leaf {
+        display: none;
+        position: absolute;
+        bottom: -145px;
+        left: 0;
+        z-index: -1;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+}

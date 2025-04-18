@@ -3,7 +3,7 @@ import Grid from "../Grid"
 import utils from "./../../styles/utils.module.scss"
 import styles from "./Footer.module.scss"
 import Icon from "../Icon/Icons"
-import buttonStyles from './../../styles/button.module.scss'
+import buttonStyles from "./../../styles/button.module.scss"
 
 function Footer({ footerCta }: { footerCta?: boolean }) {
     return (
@@ -23,7 +23,12 @@ function Footer({ footerCta }: { footerCta?: boolean }) {
                                     help your business grow.
                                 </p>
                             </div>
-                            <button className={buttonStyles.btnDark}>Get in touch</button>
+                            <Link
+                                to="/contact"
+                                className={buttonStyles.btnDark}
+                            >
+                                Get in touch
+                            </Link>
                         </div>
                     </Grid.container>
                 </div>
@@ -36,18 +41,20 @@ function Footer({ footerCta }: { footerCta?: boolean }) {
                             alt=""
                         />
                         <div className={styles.linkList}>
-                            <Link className={styles.link} to="/">
+                            <Link className={styles.link} to="/about">
                                 our company
                             </Link>
-                            <Link className={styles.link} to="/">
+                            <Link className={styles.link} to="/locations">
                                 locations
                             </Link>
-                            <Link className={styles.link} to="/">
+                            <Link className={styles.link} to="/contact">
                                 contact
                             </Link>
                         </div>
                     </div>
-                    <div className={` ${styles.footerBottom} ${Grid.spanRow} ${Grid.subgrid}`}>
+                    <div
+                        className={` ${styles.footerBottom} ${Grid.spanRow} ${Grid.subgrid}`}
+                    >
                         <div className={`${Grid.span4M} ${utils.clrGrey}`}>
                             <p>
                                 <strong>Designo Central Office</strong>
@@ -69,11 +76,24 @@ function Footer({ footerCta }: { footerCta?: boolean }) {
                         </div>
                         <div className={`${Grid.span4M}`}>
                             <div className={styles.socialLinks}>
-                            <a href="#"><Icon.facebook /></a>
-                            <a href="#"><Icon.youtube /></a>
-                            <a href="#"><Icon.twitter /></a>
-                            <a href="#"><Icon.pinterest /></a>
-                            <a href="#"><Icon.instagram /></a>
+                                <a href="#" aria-label="Go to our Facebook">
+                                    <Icon.facebook />
+                                </a>
+                                <a
+                                    href="#"
+                                    aria-label="Go to our Youtube channel"
+                                >
+                                    <Icon.youtube />
+                                </a>
+                                <a href="#" aria-label="Go to our Twitter page">
+                                    <Icon.twitter />
+                                </a>
+                                <a href="#" aria-label="Go to our Pinterest">
+                                    <Icon.pinterest />
+                                </a>
+                                <a href="#" aria-label="Go to our Instagram">
+                                    <Icon.instagram />
+                                </a>
                             </div>
                         </div>
                     </div>

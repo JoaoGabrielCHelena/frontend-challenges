@@ -8,25 +8,32 @@ function Header() {
     let [open, setOpen] = useState(false)
     return (
         <Grid.container>
-            <div className={`${Grid.spanRow} ${styles.header}`}>
-                <img src="/assets/shared/desktop/logo-dark.png" alt="" />
-                <button onClick={() => setOpen(!open)} className={styles.linkButton}>
+            <header className={`${Grid.spanRow} ${styles.header}`}>
+                <Link aria-label="Go to home" to="/">
+                    <img src="/assets/shared/desktop/logo-dark.png" alt="" />
+                </Link>
+                <button
+                    onClick={() => setOpen(!open)}
+                    className={styles.linkButton}
+                >
                     {open ? <Icon.close /> : <Icon.hamburger />}
                 </button>
-                <div className={`${styles.linkListWrapper} ${(open) ? styles.linkListWrapperActive : "" }`}>
-                <div className={`${styles.linkList}`}>
-                    <Link className={styles.link} to="/">
-                        our company
-                    </Link>
-                    <Link className={styles.link} to="/">
-                        locations
-                    </Link>
-                    <Link className={styles.link} to="/">
-                        contact
-                    </Link>
+                <div
+                    className={`${styles.linkListWrapper} ${open ? styles.linkListWrapperActive : ""}`}
+                >
+                    <div className={`${styles.linkList}`}>
+                        <Link className={styles.link} to="/about">
+                            our company
+                        </Link>
+                        <Link className={styles.link} to="/locations">
+                            locations
+                        </Link>
+                        <Link className={styles.link} to="/contact">
+                            contact
+                        </Link>
+                    </div>
                 </div>
-                </div>
-            </div>
+            </header>
         </Grid.container>
     )
 }

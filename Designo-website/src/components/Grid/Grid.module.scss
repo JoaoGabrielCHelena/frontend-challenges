@@ -5,7 +5,7 @@ $breakpoints:
     556px "M" 12 10px,
     1024px "L" 12 30px;
 
-@each $min, $name in $breakpoints {
+@each $min, $name, $cols in $breakpoints {
     @media screen and (min-width: $min) {
         @for $i from 1 through 12 {
             .fixedSpan#{$i}#{$name} {
@@ -40,15 +40,26 @@ $breakpoints:
             display: flex;
             flex-direction: column;
         }
+
+        .spanRow#{$name} {
+            @media screen and (min-width: $min) {
+                grid-column: span $cols;
+            }
+        }
     }
 }
 
 .grid {
     max-width: 1158px;
     margin: 0 auto;
-    padding: 0 24px;
+    &:not(.fullMobile) {
+        padding-left: 24px;
+        padding-right: 24px;
+    };
 
     @media screen and (min-width: 556px) {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
         display: grid;
     }
 

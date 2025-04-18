@@ -1,0 +1,107 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #fdf3f0;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    @media (min-width: 556px) {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 1024px) {
+        grid-row: span 2;
+        display: grid;
+        grid-template-rows: subgrid;
+        text-align: center;
+        align-items: normal;
+    }
+    div {
+        @media (min-width: 556px) {
+            margin: auto;
+        }
+        @media (min-width: 1024px) {
+            margin: unset;
+        }
+    }
+
+    &Container {
+        @media (min-width: 1024px) {
+            grid-auto-rows: 320px 128px;
+        }
+    }
+    &Image {
+        @media (min-width: 556px) {
+            max-height: 310px;
+        }
+        @media (min-width: 1024px) {
+            max-height: unset;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &Title {
+        color: var(--primary);
+        text-transform: uppercase;
+        padding: 32px 0 16px;
+        @media (min-width: 556px) {
+            padding: 0;
+        }
+    }
+    &Description {
+        color: var(--darkGrey);
+        margin: 16px auto 0;
+        max-width: 290px;
+
+        padding-bottom: 32px;
+        @media (min-width: 556px) {
+            padding: 0;
+        }
+    }
+    &:hover {
+        background: var(--primary);
+        * {
+            color: var(--white);
+        }
+    }
+}
+
+.hero {
+    padding: 105px 24px;
+    background-color: var(--primary);
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 96px;
+    @media (min-width: 556px) {
+        border-radius: 15px;
+        margin-bottom: 120px;
+        padding: 64px 0;
+    }
+    @media (min-width: 1024px) {
+        margin-bottom: 160px;
+    }
+    &Description {
+        margin: 24px auto 0;
+        max-width: 400px;
+    }
+    &Container {
+        position: relative;
+    }
+    &Leaf {
+        position: absolute;
+        left: 0;
+        top: 125px;
+        z-index: -1;
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+}

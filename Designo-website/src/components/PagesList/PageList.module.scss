@@ -1,0 +1,70 @@
+.page {
+    &Card {
+        z-index: 0;
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        &Container {
+            display: grid;
+            padding-top: 120px;
+            padding-bottom: 120px;
+            @media (min-width: 1024px) {
+                padding-top: 160px;
+                padding-bottom: 160px;
+            }
+        }
+        &:hover:after,
+        &:focus-visible:after {
+            opacity: 0.8;
+            background: var(--primary);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            // its slightly bigger just so when there are rounding issues it can always cover the entire card
+            height: 105%;
+            width: 105%;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            opacity: 0.5;
+            background: #000000;
+            z-index: 2;
+        }
+    }
+    &Text {
+        z-index: 3;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        text-decoration: none;
+        color: var(--white);
+    }
+    &Title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+    &Blip {
+        display: flex;
+        font-size: 15px;
+        font-weight: 500;
+        gap: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 1;
+        align-items: center;
+    }
+    &Bg {
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+    }
+}

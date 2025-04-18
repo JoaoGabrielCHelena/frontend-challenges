@@ -1,12 +1,14 @@
 @mixin button {
+    display: inline-block;
     padding: 16px 25px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     border-radius: 8px;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    &:hover {
+    &:hover,
+    &:focus-visible {
         color: var(--white);
         background: var(--secondary);
     }
