@@ -30,7 +30,7 @@ export function ScrollToTop() {
   return null;
 }
 
-const basename = import.meta.env.PROD ? "https://joaogabrielchelena.github.io/frontend-challenges/Designo-website/" : "/"
+const basename = import.meta.env.VITE_BASENAME
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
