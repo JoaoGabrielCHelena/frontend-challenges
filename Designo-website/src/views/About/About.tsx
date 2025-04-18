@@ -13,16 +13,16 @@ function About() {
                     >
                         <picture>
                             <source
-                                srcSet={`/assets/about/desktop/image-about-hero.jpg`}
+                                srcSet={`./assets/about/desktop/image-about-hero.jpg`}
                                 media="(min-width: 1024px)"
                             />
                             <source
-                                srcSet={`/assets/about/tablet/image-about-hero.jpg`}
+                                srcSet={`./assets/about/tablet/image-about-hero.jpg`}
                                 media="(min-width: 556px)"
                             />
                             <img
                                 loading="lazy"
-                                src={`/assets/about/mobile/image-about-hero.jpg`}
+                                src={`./assets/about/mobile/image-about-hero.jpg`}
                                 alt=""
                             />
                         </picture>
@@ -48,16 +48,16 @@ function About() {
                 >
                     <picture>
                         <source
-                            srcSet={`/assets/about/desktop/image-world-class-talent.jpg`}
+                            srcSet={`./assets/about/desktop/image-world-class-talent.jpg`}
                             media="(min-width: 1024px)"
                         />
                         <source
-                            srcSet={`/assets/about/tablet/image-world-class-talent.jpg`}
+                            srcSet={`./assets/about/tablet/image-world-class-talent.jpg`}
                             media="(min-width: 556px)"
                         />
                         <img
                             loading="lazy"
-                            src={`/assets/about/mobile/image-world-class-talent.jpg`}
+                            src={`./assets/about/mobile/image-world-class-talent.jpg`}
                             alt=""
                         />
                     </picture>
@@ -90,16 +90,16 @@ function About() {
                     <div className={`${Grid.spanRow} ${styles.row}`}>
                         <picture>
                             <source
-                                srcSet={`/assets/about/desktop/image-real-deal.jpg`}
+                                srcSet={`./assets/about/desktop/image-real-deal.jpg`}
                                 media="(min-width: 1024px)"
                             />
                             <source
-                                srcSet={`/assets/about/tablet/image-real-deal.jpg`}
+                                srcSet={`./assets/about/tablet/image-real-deal.jpg`}
                                 media="(min-width: 556px)"
                             />
                             <img
                                 loading="lazy"
-                                src={`/assets/about/mobile/image-real-deal.jpg`}
+                                src={`./assets/about/mobile/image-real-deal.jpg`}
                                 alt=""
                             />
                         </picture>

@@ -34,7 +34,7 @@ function Home() {
                     <div className={styles.attributeImage}>
                         <img
                             loading="lazy"
-                            src={`/assets/home/desktop/illustration-${i.title}.svg`}
+                            src={`./assets/home/desktop/illustration-${i.title}.svg`}
                             alt=""
                         />
                         <Icon.backgroundCircle
@@ -75,7 +75,7 @@ function Home() {
                         </div>
                         <div className={styles.heroImage}>
                             <img
-                                src="/assets/home/desktop/image-hero-phone.png"
+                                src="./assets/home/desktop/image-hero-phone.png"
                                 alt=""
                             />
                         </div>

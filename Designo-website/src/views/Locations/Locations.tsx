@@ -50,17 +50,17 @@ function Locations() {
                 >
                     <picture className={positionClasses.image}>
                         <source
-                            srcSet={`/assets/locations/desktop/image-map-${i.imageName}`}
+                            srcSet={`./assets/locations/desktop/image-map-${i.imageName}`}
                             media="(min-width: 1024px)"
                         />
                         <source
-                            srcSet={`/assets/locations/tablet/image-map-${i.imageName}`}
+                            srcSet={`./assets/locations/tablet/image-map-${i.imageName}`}
                             media="(min-width: 556px)"
                         />
                         <img
                             loading="lazy"
                             className={`${styles.locationImage}`}
-                            src={`/assets/locations/desktop/image-map-${i.imageName}`}
+                            src={`./assets/locations/desktop/image-map-${i.imageName}`}
                             alt=""
                         />
                     </picture>

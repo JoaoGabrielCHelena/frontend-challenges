@@ -7,42 +7,42 @@ import Icon from "../../components/Icon/Icons"
 function Showcase({ id }: { id: "web" | "app" | "graphic" }) {
     let webCards = [
         {
-            image: "/assets/web-design/desktop/image-express.jpg",
+            image: "./assets/web-design/desktop/image-express.jpg",
             title: "express",
             description:
                 "A multi-carrier shipping website for ecommerce businesses",
             link: "/",
         },
         {
-            image: "/assets/web-design/desktop/image-transfer.jpg",
+            image: "./assets/web-design/desktop/image-transfer.jpg",
             title: "transfer",
             description:
                 "Site for low-cost money transfers and sending money within seconds",
             link: "/",
         },
         {
-            image: "/assets/web-design/desktop/image-photon.jpg",
+            image: "./assets/web-design/desktop/image-photon.jpg",
             title: "photon",
             description:
                 "A state-of-the-art music player with high-resolution audio and DSP effects",
             link: "/",
         },
         {
-            image: "/assets/web-design/desktop/image-builder.jpg",
+            image: "./assets/web-design/desktop/image-builder.jpg",
             title: "builder",
             description:
                 "Connects users with local contractors based on their location",
             link: "/",
         },
         {
-            image: "/assets/web-design/desktop/image-blogr.jpg",
+            image: "./assets/web-design/desktop/image-blogr.jpg",
             title: "blogr",
             description:
                 "Blogr is a platform for creating an online blog or publication",
             link: "/",
         },
         {
-            image: "/assets/web-design/desktop/image-camp.jpg",
+            image: "./assets/web-design/desktop/image-camp.jpg",
             title: "camp",
             description:
                 "Get expert training in coding, data, design, and digital marketing",
@@ -50,35 +50,35 @@ function Showcase({ id }: { id: "web" | "app" | "graphic" }) {
         },
     ],appCards = [
         {
-            image: "/assets/app-design/desktop/image-airfilter.jpg",
+            image: "./assets/app-design/desktop/image-airfilter.jpg",
             title: "airfilter",
             description:
                 "Solving the problem of poor indoor air quality by filtering the air",
             link: "/",
         },
         {
-            image: "/assets/app-design/desktop/image-eyecam.jpg",
+            image: "./assets/app-design/desktop/image-eyecam.jpg",
             title: "eyecam",
             description:
                 "Product that lets you edit your favorite photos and videos at any time",
             link: "/",
         },
         {
-            image: "/assets/app-design/desktop/image-faceit.jpg",
+            image: "./assets/app-design/desktop/image-faceit.jpg",
             title: "faceit",
             description:
                 "Get to meet your favorite internet superstar with the faceit app",
             link: "/",
         },
         {
-            image: "/assets/app-design/desktop/image-todo.jpg",
+            image: "./assets/app-design/desktop/image-todo.jpg",
             title: "todo",
             description:
                 "A todo app that features cloud sync with light and dark mode",
             link: "/",
         },
         {
-            image: "/assets/app-design/desktop/image-loopstudios.jpg",
+            image: "./assets/app-design/desktop/image-loopstudios.jpg",
             title: "loopstudios",
             description:
                 "A VR experience app made for Loopstudios",
@@ -86,21 +86,21 @@ function Showcase({ id }: { id: "web" | "app" | "graphic" }) {
         },
     ],graphicCards = [
         {
-            image: "/assets/graphic-design/desktop/image-change.jpg",
+            image: "./assets/graphic-design/desktop/image-change.jpg",
             title: "tim brown",
             description:
                 "A book cover designed for Tim Brown’s new release, ‘Change’",
             link: "/",
         },
         {
-            image: "/assets/graphic-design/desktop/image-boxed-water.jpg",
+            image: "./assets/graphic-design/desktop/image-boxed-water.jpg",
             title: "boxed water",
             description:
                 "A simple packaging concept made for Boxed Water",
             link: "/",
         },
         {
-            image: "/assets/graphic-design/desktop/image-science.jpg",
+            image: "./assets/graphic-design/desktop/image-science.jpg",
             title: "science!",
             description:
                 "A poster made in collaboration with the Federal Art Project",
