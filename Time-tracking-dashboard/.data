@@ -1,0 +1,10 @@
+{
+  branch: "Time-tracking-dashboard/",
+  name: "Time tracking dashboard",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw",
+  description: "Still from the times where I thought everything had to have Bootstrap. My first time using SASS mixins well.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Time-tracking-dashboard/",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Time-tracking-dashboard/",
+  priority: 3,
+}

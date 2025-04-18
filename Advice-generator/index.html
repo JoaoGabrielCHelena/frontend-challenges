@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advice Generator</title>
+
+        <link rel="icon" type="image/svg" href="./images/favicon.svg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+        <style>
+            :root {
+                --green: hsl(150, 100%, 66%);
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                padding: 24px;
+
+                background: hsl(218, 23%, 16%);
+
+                font-family: "Manrope", sans-serif;
+                font-weight: 800;
+                min-height: 100vh;
+            }
+            .card {
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 540px;
+                padding: 45px;
+
+                background: hsl(217, 19%, 24%);
+                border-radius: 10px;
+            }
+            .card-number {
+                margin-bottom: 30px;
+
+                text-transform: uppercase;
+                line-spacing: 4px;
+                color: var(--green);
+            }
+            .card-text {
+                font-size: 28px;
+                text-align: center;
+                color: hsl(193, 38%, 86%);
+            }
+            .card-divider {
+                width: 100%;
+                margin: 35px 0 25px;
+            }
+            .card-divider img {
+                width: 100%;
+            }
+            .card-button {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                translate: -50% 50%;
+
+                padding: 15px;
+                aspect-ratio: 1;
+                border-radius: 99px;
+
+                background: var(--green);
+                color: #202733;
+                border: none;
+
+                cursor: pointer;
+            }
+            .card-button:hover {
+                box-shadow: 0 0 15px 5px var(--green);
+            }
+            .attribution {
+                position: absolute;
+                top: 0;
+                font-size: 11px;
+                text-align: center;
+                color: white;
+            }
+            .attribution a {
+                color: hsl(228, 100%, 87%)
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <p class="card-number">Advice #<span class="card-number-id">0<span/></p>
+            <p class="card-text">The sooner we realize that we are locked in deadly warfare with our ruling, corporate elite, the sooner we will realize that these elites must be overthrown.</p>
+            <picture class="card-divider">
+                <source srcset="./images/pattern-divider-desktop.svg" media="(min-width: 556px)">
+                <img src="./images/pattern-divider-mobile.svg" alt="">
+            </picture>
+            <button aria-label="generate new advice" class="card-button" onclick="generate()">
+                <svg height="24" width="24" aria-hidden="true" focusable="false">
+                    <use xlink:href="./images/icon-dice.svg#icon"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        </div>
+    </body>
+    <script>
+        let url = "https://api.adviceslip.com/advice";
+        async function generate() {
+            try {
+                document.querySelector(".card-text").innerText = "Fetching new advice."
+                document.querySelector(".card-number-id").innerText = "??"
+
+                const response = await fetch(`${url}?t=${Date.now()}`);
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+
+                let json = await response.json();
+
+                document.querySelector(".card-text").innerText = json.slip.advice 
+                document.querySelector(".card-number-id").innerText = json.slip.id
+            } catch (error) {
+                document.querySelector(".card-text").innerText = error.message
+                document.querySelector(".card-number-id").innerText = "Error!"
+            }
+        }
+    </script>
+</html>

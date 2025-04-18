@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap')
+
+$page-bg: hsl(226, 43%, 10%)
+$card-bg: hsl(235, 46%, 20%)
+$hover-bg: hsl(235, 45%, 61%)
+$text: hsl(236, 100%, 87%)
+$profile-bg: hsl(246, 80%, 60%)
+$work-bg: hsl(15, 100%, 70%)
+$play-bg: hsl(195, 74%, 62%)
+$study-bg: hsl(348, 100%, 68%)
+$exercise-bg: hsl(145, 58%, 55%)
+$social-bg: hsl(264, 64%, 52%)
+$selfCare-bg: hsl(43, 84%, 65%)
+$border-radius: 1rem
+
+body
+    color: white
+    background: $page-bg
+    font-family: 'Rubik', sans-serif
+    padding: 3rem 1rem
+    min-height: 100vh
+    @media (min-width: 996px)
+        display: grid
+        align-items: center
+        justify-items: center
+    
+.special-block
+    position: relative
+    border-radius: $border-radius
+
+.main-block
+    background: $card-bg
+    border-radius: $border-radius
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &:not(#profile)
+        box-shadow: 0 0 0em 1px $card-bg
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 80%
+        padding: 2rem
+
+        &:hover:not(:has(img:hover))
+            cursor: pointer
+            background-color: color-mix(in srgb, $card-bg 90%, white)
+
+        h1
+            font-size: 18px
+            font-weight: 500
+
+        .previous
+            font-size: 16px
+            line-height: 16px
+            color: $text
+
+        .hours
+            font-weight: 300
+
+        img
+            padding: .8rem
+            cursor: pointer
+            position: absolute
+            top: 1.5rem
+            right: 1.4rem
+            &:hover
+                filter: brightness(150%)
+
+@mixin tall-blocks-styling()
+    .main-block
+        &:not(#profile)
+            .hours
+                font-size: 3.8rem
+                line-height: 4rem
+
+@mixin short-blocks-styling()
+    .main-block
+        &:not(#profile)
+            padding: 2rem 1rem
+            .hours
+                font-size: 2.5rem
+                line-height: 2.8rem
+            
+            img
+                top: 1.5rem
+                right: .5rem
+
+            .previous
+                position: absolute
+                right: 1rem
+                bottom: 2rem
+#profile
+
+    img
+        width: 5.4rem
+        aspect-ratio: 1
+        border-radius: 50%
+        border: 4px white solid
+
+    h1
+        font-weight: 300
+
+    p
+        
+        margin-bottom: 0
+        color: $text  
+ 
+    .profile-content-wrapper
+        display: flex
+        padding: 0 2rem
+        &:nth-child(2) // this is the section with the switches
+            display: flex
+            height: 28%
+            justify-content: space-evenly
+        
+    & .special-block
+        background: $profile-bg
+        height: 70%
+        & .profile-content-wrapper
+            display: flex
+    
+    .active
+        color: white
+
+    input
+        display: none
+        &:checked + label
+            color: white
+    
+    label
+        cursor: pointer
+        color: $text
+        &:hover
+            filter: brightness(150%)
+
+@mixin wide-profile()
+    #profile
+        grid-column: 1 / -1
+
+        & .special-block .profile-content-wrapper
+            height: 100%
+
+        .profile-content-wrapper
+            flex-direction: row
+            align-items: center 
+            justify-content: space-evenly
+            padding: 0
+
+        img
+            margin-top: 0rem
+        
+        p
+            margin-top: 0rem
+
+    
+@mixin tall-profile()
+    #profile
+        grid-row: 1 / -1
+
+        .profile-content-wrapper
+            flex-direction: column 
+            align-items: normal
+
+        img
+            margin-top: 2rem
+
+        p
+            margin-top: 3rem
+
+@mixin bgImage($color, $icon, $vertical-offset: -6%)
+    background: $color url($icon) no-repeat 90% $vertical-offset
+
+#Work
+    @include bgImage($work-bg, '../images/icon-work.svg')
+#Play
+    @include bgImage($play-bg, '../images/icon-play.svg')
+#Study
+    @include bgImage($study-bg, '../images/icon-study.svg')
+#Exercise
+    @include bgImage($exercise-bg, '../images/icon-exercise.svg', 0)
+#Social
+    @include bgImage($social-bg, '../images/icon-social.svg', 0)
+#SelfCare
+    @include bgImage($selfCare-bg, '../images/icon-self-care.svg')
+
+
+.wrapper
+    gap: 1.5rem
+    $slim-boxes:164px
+    $tall-boxes:246px
+    display: grid
+    @media (min-width: 1125px)
+        $rows: 2
+        $columns: 4
+        grid-template: repeat($rows, $tall-boxes) / repeat($columns, 1fr)
+        width: 1110px
+        @include tall-blocks-styling()
+        @include tall-profile()
+
+    @media (min-width: 996px) and (max-width: 1125px)
+        $rows: 3
+        $columns: 3
+        grid-template: repeat($rows, $slim-boxes) / repeat($columns, 1fr)
+        max-width: 1025px
+        @include short-blocks-styling()
+        @include tall-profile()
+        
+        
+
+    @media (min-width:565px) and (max-width: 996px)
+        $rows: 4
+        $columns: 2
+        grid-template: repeat($rows, $tall-boxes) / repeat($columns, 1fr)
+        max-width: 800px
+        @include tall-blocks-styling()
+        @include wide-profile()                
+        margin: auto
+
+    @media (max-width:565px)
+        $rows: 7
+        $columns: 1
+        grid-template: repeat($rows, $slim-boxes) / repeat($columns, 1fr)
+        max-width: 480px
+        @include short-blocks-styling()  
+        @include wide-profile()
+        margin: auto
+
+#attribution
+    font-size: 11px
+    text-align: center
+    position: absolute
+    color: white
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1000
+    a 
+        color: hsl(228, 100%, 87%)
