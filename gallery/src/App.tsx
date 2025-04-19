@@ -24,7 +24,7 @@ function Card({
 }) {
     return (
         <div className={`${className} card`}>
-            <img src={`./thumbnails/${branch}.png`} width="350" alt="" />
+            <img src={`./thumbnails/${branch}.png`} width="100%" alt="" />
             <div className="cardContent">
                 <div>
                     <div className="cardTitleWrapper">
@@ -64,7 +64,7 @@ function App() {
     let cards = organisedData.map((e) => {
         return (
             <Card
-                className={utils.absoluteSpan3L}
+                className={utils.absoluteSpan3M}
                 liveUrl={e.liveUrl}
                 codeUrl={e.codeUrl}
                 name={e.name}
@@ -92,7 +92,7 @@ function App() {
                         description={e.description}
                         branch={e.branch}
                         key={e.name}
-                        className={`${utils.absoluteSpan4L}`}
+                        className={`${utils.absoluteSpan3M} ${utils.absoluteSpan4L}`}
                     />
                 </>
             )
@@ -106,7 +106,7 @@ function App() {
             gridStartClass = `gridStart${startingPosition}L`
         return (
             <div
-                className={`${utils.subgrid} ${utils.span8L} ${utils[gridStartClass]}`}
+                className={`${utils.subgrid} ${utils.span8M} ${utils[gridStartClass]}`}
             >
                 {highlightCards}
             </div>
@@ -159,7 +159,7 @@ function App() {
                     <p className="subtitleQuip">
                         organised from best to worst, sorta
                     </p>
-                    <div className={`${utils.grid}`}>{cards}</div>
+                    <div className={`${utils.gridM}`}>{cards}</div>
                 </section>
             </main>
             <footer>
