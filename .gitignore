@@ -79,3 +79,29 @@ Designo-website/*.ntvs*
 Designo-website/*.njsproj
 Designo-website/*.sln
 Designo-website/*.sw?
+
+# Character-counter ignores
+# Logs
+Character-counter/logs
+Character-counter/*.log
+Character-counter/npm-debug.log*
+Character-counter/yarn-debug.log*
+Character-counter/yarn-error.log*
+Character-counter/pnpm-debug.log*
+Character-counter/lerna-debug.log*
+
+Character-counter/node_modules
+Character-counter/dist
+Character-counter/dist-ssr
+Character-counter/*.local
+
+# Editor directories and files
+Character-counter/.vscode/*
+Character-counter/!.vscode/extensions.json
+Character-counter/.idea
+Character-counter/.DS_Store
+Character-counter/*.suo
+Character-counter/*.ntvs*
+Character-counter/*.njsproj
+Character-counter/*.sln
+Character-counter/*.sw?
