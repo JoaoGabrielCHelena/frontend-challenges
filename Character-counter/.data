@@ -1,0 +1,10 @@
+{
+  branch: "Character-counter",
+  name: "Character Counter",
+  src: "Frontend Mentor",
+  srcLink: "https://www.frontendmentor.io/challenges/character-counter-znSgeWs_i6",
+  description: "My first use of Svelte, starting with runes.",
+  codeUrl: "https://github.com/JoaoGabrielCHelena/frontend-challenges/tree/main/Character-counter",
+  liveUrl: "https://joaogabrielchelena.github.io/frontend-challenges/Character-counter",
+  priority: 4,
+}
