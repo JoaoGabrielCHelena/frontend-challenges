@@ -1,0 +1,31 @@
+@mixin transition($variables...) {
+    transition-property: $variables;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@mixin text1() {
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 1;
+    font-weight: bold;
+    @media (min-width: 768px) {
+        font-size: 64px;
+    }
+}
+@mixin text2() {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-weight: semibold;
+}
+@mixin text3() {
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  line-height: 1.4;
+}
+@mixin text4() {
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+}
