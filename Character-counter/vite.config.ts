@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Character-counter/' ,
+  base: '/frontend-challenges/Character-counter/' ,
   plugins: [svelte()],
     resolve: {
         alias: {
